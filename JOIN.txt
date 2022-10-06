@@ -1,0 +1,24 @@
+1.SELECT datadiri.*, tb_kelas.* FROM datadiri INNER JOIN tb_kelas ON datadiri.kode_kelas = tb_kelas.kode_kelas;
+2.SELECT datadiri.nis,datadiri.namalengkap, tb_kelas.nama_kelas, tb_kelas.nama_jurusan FROM datadiri INNER JOIN tb_kelas ON datadiri.kode_kelas = tb_kelas.kode_kelas;
+3.SELECT datadiri.nis,datadiri.namalengkap, tb_kelas.nama_kelas, tb_kelas.nama_jurusan FROM datadiri LEFT JOIN tb_kelas ON datadiri.kode_kelas = tb_kelas.kode_kelas;
+4.SELECT datadiri.nis,datadiri.namalengkap, tb_kelas.nama_kelas, tb_kelas.nama_jurusan FROM datadiri RIGHT JOIN tb_kelas ON datadiri.kode_kelas = tb_kelas.kode_kelas;
+5.SELECT datadiri.nis,datadiri.namalengkap, tb_kelas.nama_kelas, tb_kelas.nama_jurusan FROM datadiri LEFT JOIN tb_kelas ON datadiri.kode_kelas = tb_kelas.kode_kelas UNION SELECT datadiri.nis,datadiri.namalengkap, tb_kelas.nama_kelas, tb_kelas.nama_jurusan FROM datadiri RIGHT JOIN tb_kelas ON datadiri.kode_kelas = tb_kelas.kode_kelas;
+6.SELECT datadiri.nis,datadiri.namalengkap, tb_kelas.nama_kelas, tb_kelas.nama_jurusan FROM datadiri LEFT JOIN tb_kelas ON datadiri.kode_kelas = tb_kelas.kode_kelas WHERE nama_kelas IS NULL;
+7.SELECT datadiri.nis,datadiri.namalengkap, tb_kelas.nama_kelas, tb_kelas.nama_jurusan FROM datadiri LEFT JOIN tb_kelas ON datadiri.kode_kelas = tb_kelas.kode_kelas WHERE nama_kelas IS NULL AND namalengkap LIKE '%RIZ%';
+(INNER/LEFT/RIGHT = UNION)
+8.SELECT datadiri.nis, datadiri.namalengkap, tb_kelas.nama_kelas, tb_eskul.nama_eskul
+FROM datadiri
+INNER JOIN tb_kelas ON datadiri.kode_kelas = tb_kelas.kode_kelas
+INNER JOIN tb_eskul ON datadiri.kode_eskul = tb_eskul.kode_eskul;
+9.SELECT datadiri.nis, datadiri.namalengkap, tb_kelas.nama_kelas, tb_eskul.nama_eskul
+FROM datadiri
+LEFT JOIN tb_kelas ON datadiri.kode_kelas = tb_kelas.kode_kelas
+INNER JOIN tb_eskul ON datadiri.kode_eskul = tb_eskul.kode_eskul;
+10.SELECT datadiri.nis, datadiri.namalengkap, tb_kelas.nama_kelas, tb_eskul.nama_eskul
+FROM datadiri
+INNER JOIN tb_kelas ON datadiri.kode_kelas = tb_kelas.kode_kelas
+RIGHT JOIN tb_eskul ON datadiri.kode_eskul = tb_eskul.kode_eskul;
+11.SELECT datadiri.nis, datadiri.namalengkap, tb_kelas.nama_kelas, tb_eskul.nama_eskul
+FROM datadiri
+LEFT JOIN tb_kelas ON datadiri.kode_kelas = tb_kelas.kode_kelas
+RIGHT JOIN tb_eskul ON datadiri.kode_eskul = tb_eskul.kode_eskul;
