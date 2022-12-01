@@ -1,0 +1,13 @@
+cara pengambilan data di excel (=kolom+baris)
+=RANK(F2;$F$2:$F$6;0)
+=IF(F2>=30000000;"lulus";"tidak lulus")
+=AVERAGE(C2:E2)
+=SUM(C2;D2;E2)
+=COUNT(F2:F6)
+=MAX(F2:F6)
+=MIN(F2:F6)
+=SUMIF(B2:B6;"L";F2:F6)
+=COUNTIF(H2:H6;"lulus")
+=(C2+D2)
+=C2-E2
+OM1+OM2
