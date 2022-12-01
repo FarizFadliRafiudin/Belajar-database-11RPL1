@@ -1,0 +1,32 @@
+-SELECT emplo.* , job.*
+FROM emplo
+JOIN job ON job.id_job = emplo.id_job;
+
+-SELECT emplo.* , job.*
+FROM emplo
+LEFT JOIN job ON job.id_job = emplo.id_job;(kalau mau munculin semuanya)
+
+-SELECT emplo.* , job.*
+FROM emplo
+LEFT JOIN job ON job.id_job = emplo.id_job
+WHERE emplo.id_job IS NULL;(untuk memunculkan NULL atau tidak di isi)
+
+-SELECT emplo.full_name , emplo.gender , job.name_jobs
+FROM emplo
+LEFT JOIN job ON job.id_job = emplo.id_job;(untuk menampilkan isi dari table)
+
+-SELECT emplo.full_name , emplo.gender , job.name_jobs
+FROM emplo
+LEFT JOIN job ON job.id_job = emplo.id_job
+WHERE job.name_jobs = 'FrontEnd Developer' 
+OR job.name_jobs = 'BackEnd Developer';(untuk menampilkan data pekerjaan)atau
+* SELECT emplo.full_name , emplo.gender , job.name_jobs
+FROM emplo
+LEFT JOIN job ON job.id_job = emplo.id_job
+WHERE job.name_jobs = 'FrontEnd Developer
+';(jika opsi satu tidak jalan)
+
+-SELECT emplo.full_name , emplo.gender , job.name_jobs
+FROM emplo
+LEFT JOIN job ON job.id_job = emplo.id_job
+WHERE emplo.full_name LIKE = '%A%';(untuk menampilkan nama)
